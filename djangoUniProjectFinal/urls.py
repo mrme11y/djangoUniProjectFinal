@@ -25,5 +25,5 @@ from djangoUniProjectFinal import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name=''),
-    path("favicon.ico", RedirectView.as_view(url=staticfiles_storage.url("favicon.ico")), name='favicon'),
+    path("favicon.ico", RedirectView.as_view(url=staticfiles_storage.url("images/favicon.ico")), name='favicon'),
 ]
