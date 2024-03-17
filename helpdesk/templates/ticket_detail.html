@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <h1>{{ ticket.summary }}</h1>
+    <p>Description: {{ ticket.description }}</p>
+    <p>Status: {{ ticket.status }}</p>
+    <p>Creator: {{ ticket.creator }}</p>
+</body>
+
+{% endblock %}
