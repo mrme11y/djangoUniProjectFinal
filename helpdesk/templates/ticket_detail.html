@@ -3,10 +3,37 @@
 {% block content %}
 
 <body>
-    <h1>{{ ticket.summary }}</h1>
-    <p>Description: {{ ticket.description }}</p>
-    <p>Status: {{ ticket.status }}</p>
-    <p>Creator: {{ ticket.creator }}</p>
+    <div class="container bg-dark shadow-lg p-5 form-layout">
+        <h1>Ticket Number: {{ ticket.id }}</h1>
+        <hr>
+        <h3>Customer Details</h3>
+        <hr>
+        <p>Name: {{ ticket.first_name }} {{ ticket.last_name }}</p>
+        <p>Email: {{ ticket.email }}</p>
+        <p>Phone: {{ ticket.phone }}</p>
+        <hr>
+        <h3>Issue Details</h3>
+        <hr>
+        <p>Issue Summary: {{ ticket.summary }}</p>
+        <p>Issue Description: {{ ticket.description }}</p>
+        <p>Status: {{ ticket.status }}</p>
+        <p>Assigned To: {{ ticket.assigned_to }}</p>
+        <p>Raised By: {{ ticket.helpdesk_agent_creator }}</p>
+        <p>Created: {{ ticket.created_at }}</p>
+    
+        <hr>
+        <a href="{% url 'tickets_list' %}" class="btn btn-secondary"><i class="fa fa-caret-square-o-left" aria-hidden="true"></i> Back</a>
+            &nbsp;
+        <a href="{% url 'update_ticket' ticket.id %}" class="btn btn-success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Update ticket</a>
+            &nbsp;
+        {% for group in request.user.groups.all %}
+            {% if group.name == 'Managers' %}
+                <a href="{% url 'delete_ticket' ticket.id %}" class="btn btn-danger"><i class="fa fa-window-close-o" aria-hidden="true"></i> Delete ticket</a>
+            {% endif %}
+        {% endfor %}
+        
+        <hr>
+    </div>
 </body>
 
 {% endblock %}

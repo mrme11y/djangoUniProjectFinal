@@ -4,10 +4,12 @@
 
 <body>
     <h1>Create Helpdesk Ticket</h1>
+    <hr>
+    
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-primary w-100 btn-block p-2"><i class="fa fa-plus" aria-hidden="true"></i> Create Ticket</button>
     </form>
 </body>
 
