@@ -6,6 +6,10 @@ from django.contrib.auth.models import User
 
 
 class Ticket(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=255)
+    phone = models.CharField(max_length=20)
     summary = models.CharField(max_length=100)
     description = models.TextField()
     helpdesk_agent_creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_tickets')

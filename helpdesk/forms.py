@@ -7,7 +7,7 @@ from django.forms.widgets import PasswordInput, TextInput
 class TicketForm(forms.ModelForm):
     class Meta:
         model = Ticket
-        fields = ['summary', 'description']
+        fields = ['first_name', 'last_name', 'email', 'phone', 'summary', 'description', 'assigned_to', 'status', 'helpdesk_agent_creator']
 
 
 # Login a user
