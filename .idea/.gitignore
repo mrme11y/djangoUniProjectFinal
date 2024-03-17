@@ -8,3 +8,5 @@
 /dataSources.local.xml
 # Pycache
 /__pycache__/
+/djangoUniProjectFinal/__pycache__/
+/helpdesk/__pycache__/
