@@ -10,18 +10,18 @@
         <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link" href="{% url 'tickets_list' %}"><i class="fa fa-home" aria-hidden="true"></i> Helpdesk Dashboard</a></li>
-  
+
                 {# // check if user is in the group 'Managers' and display the Register Helpdesk User link if true #}
                 {% for group in request.user.groups.all %}
                     {% if group.name == 'Managers' %}
                         <li class="nav-item"><a class="nav-link" href="{% url '' %}"><i class="fa fa-user-plus" aria-hidden="true"></i> Register Helpdesk User</a></li>
                     {% endif %}
                 {% endfor %}
-                
+
                 <li class="nav-item"><a class="nav-link" href="{% url 'create_ticket' %}"><i class="fa fa-plus" aria-hidden="true"></i> Create Ticket</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'user-logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'user_logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a></li>
             {% else %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'user-login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'user_login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
             {% endif %}
         </ul>
     </div>

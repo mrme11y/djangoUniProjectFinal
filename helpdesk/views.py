@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Ticket
-from .forms import TicketForm, LoginForm
+from .forms import TicketForm, LoginForm, UpdateTicket
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -50,11 +50,34 @@ def user_login(request):
                 auth.login(request, user)
                 return redirect('tickets_list')
     context = {'form': form}
-    return render(request, 'user-login.html', context)
+    return render(request, 'user_login.html', context)
 
 
 # Logout a user
-@login_required(login_url='user-login')
+@login_required(login_url='user_login')
 def user_logout(request):
     auth.logout(request)
-    return redirect('user-login')
+    return redirect('user_login')
+
+
+# Update a ticket
+@login_required(login_url='user_login')
+def update_ticket(request, ticket_id):
+    ticket = Ticket.objects.get(id=ticket_id)
+    form = UpdateTicket(instance=ticket)
+    if request.method == 'POST':
+        form = UpdateTicket(request.POST, instance=ticket)
+        if form.is_valid():
+            form.save()
+            return redirect('tickets_list')
+    context = {'form': form}
+    return render(request, 'update_ticket.html', context)
+
+
+# Delete a ticket
+@login_required(login_url='user_login')
+def delete_ticket(request, ticket_id):
+    ticket = Ticket.objects.get(id=ticket_id)
+    ticket.delete()
+    return redirect('tickets_list')
+
