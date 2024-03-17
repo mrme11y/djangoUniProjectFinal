@@ -1,7 +1,8 @@
 from django import forms
-from .models import Ticket
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.forms.widgets import PasswordInput, TextInput
+
+from .models import Ticket
 
 
 class TicketForm(forms.ModelForm):
