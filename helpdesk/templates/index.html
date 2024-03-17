@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <body>
+        <br>
+        <br>
+        <div class="text-center">
+            <h1>djangoUniProjectFinal</h1>
+            <h2>Welcome to the HelpDesk Ticketing System</h2>
+            <br />
+            
+            <div class="text-center">
+                <h3>Go to sign in page:  <a class="btn btn-outline-success" type="button" href="{% url 'user-login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a> </h3>
+            </div>
+
+        </div>
+    </body>
+
+{% endblock %}
+

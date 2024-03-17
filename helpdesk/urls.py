@@ -19,9 +19,15 @@ from django.urls import path
 from .import views
 from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.storage import staticfiles_storage
+from helpdesk.views import create_ticket, tickets_list, ticket_detail
 
 
 urlpatterns = [
     path('', views.home, name=''),
     path("favicon.ico", RedirectView.as_view(url=staticfiles_storage.url("favicon.ico")), name='favicon'),
+    path('create_ticket/', create_ticket, name='create_ticket'),
+    path('tickets/', tickets_list, name='tickets_list'),
+    path('ticket/<int:ticket_id>/', ticket_detail, name='ticket_detail'),
+    path('user-login/', views.user_login, name='user-login'),
+    path('user-logout/', views.user_logout, name='user-logout'),
 ]
