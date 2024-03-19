@@ -5,6 +5,7 @@ from .forms import TicketForm, LoginForm, UpdateTicket
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 
 def home(request):
@@ -19,6 +20,7 @@ def create_ticket(request):
             ticket = form.save(commit=False)
             ticket.creator = request.user
             ticket.save()
+            messages.success(request, 'Ticket created successfully')
             return redirect('tickets_list')
     else:
         form = TicketForm()
@@ -48,6 +50,7 @@ def user_login(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 auth.login(request, user)
+                messages.success(request, 'Login successful')
                 return redirect('tickets_list')
     context = {'form': form}
     return render(request, 'user_login.html', context)
@@ -57,6 +60,7 @@ def user_login(request):
 @login_required(login_url='user_login')
 def user_logout(request):
     auth.logout(request)
+    messages.success(request, 'Logout successful')
     return redirect('user_login')
 
 
@@ -69,6 +73,7 @@ def update_ticket(request, ticket_id):
         form = UpdateTicket(request.POST, instance=ticket)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Ticket updated successfully')
             return redirect('tickets_list')
     context = {'form': form}
     return render(request, 'update_ticket.html', context)
@@ -79,5 +84,6 @@ def update_ticket(request, ticket_id):
 def delete_ticket(request, ticket_id):
     ticket = Ticket.objects.get(id=ticket_id)
     ticket.delete()
+    messages.success(request, 'Ticket deleted successfully')
     return redirect('tickets_list')
 
