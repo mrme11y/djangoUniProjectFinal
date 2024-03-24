@@ -15,7 +15,7 @@
                 {# // check if user is in the group 'Managers' and display the Register Helpdesk User link if true #}
                 {% for group in request.user.groups.all %}
                     {% if group.name == 'Managers' or group.name == 'Admin' %}
-                        {% if "djangouniprojectfinal" in request.path %}
+                        {% if "djangouniprojectfinal" in request.resolver_match %}
                             <li class="nav-item border-end border-primary-subtle"><a class="nav-link" href="https://djangouniprojectfinal-61eddaacee54.herokuapp.com/admin/"><i class="fa fa-user-plus" aria-hidden="true"></i> Register Helpdesk User</a></li>
                         {% else %}
                             <li class="nav-item border-end border-primary-subtle"><a class="nav-link" href="http://127.0.0.1:8000/admin/"><i class="fa fa-user-plus" aria-hidden="true"></i> Register Helpdesk User</a></li>
