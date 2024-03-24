@@ -27,7 +27,7 @@
         <a href="{% url 'update_ticket' ticket.id %}" class="btn btn-success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Update ticket</a>
             &nbsp;
         {% for group in request.user.groups.all %}
-            {% if group.name == 'Managers' %}
+            {% if group.name == 'Managers' or group.name == 'Admin' %}
                 <a href="{% url 'delete_ticket' ticket.id %}" class="btn btn-danger"><i class="fa fa-window-close-o" aria-hidden="true"></i> Delete ticket</a>
             {% endif %}
         {% endfor %}
