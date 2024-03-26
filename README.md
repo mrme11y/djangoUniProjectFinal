@@ -22,6 +22,7 @@ HELPDESK TICKETS SYSTEM DASHBOARD
 USER LOGIN CREDENTIALS
 -----------------
 
+
 ADMIN
 -----------------
 With the Admin User you are able to create new managers and helpdesk agents and you have full rights to the system. This includes creating, viewing and deleting helpdesk tickets.
