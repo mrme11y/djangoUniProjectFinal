@@ -69,7 +69,27 @@ HOW TO DELETE A TICKET (signed in as a helpdesk agent)
 
 HOW TO ADD A MANAGER (signed in as an admin)
 -----------------
-TODO
+1. Login with the admin credentials
+2. Go to the admin panel by clicking on the 'Register Helpdesk User' button on the nav bar at the top.
+3. Click on the "Add" button next to "Users"
+4. Type the new username and password e.g. manager2 and iamapassword
+5. Click SAVE
+6. On the next page (change user page) type username again e.g. manager2 and then add in their First Name, Last Name and Email
+7. Then click on 'staff status' under Permissions section
+8. Then in the Groups section, under 'Available groups' select 'Managers' and click on the right arrow to move it to the 'Chosen groups'
+9. That will automatically save the user as a manager and give them all the correct permissions
+10. Click on the 'SAVE' button at the bottom of the page
+
+
+HOW TO ADD A HELPDESK AGENT (signed in as a manager)
+-----------------
+1. Login with the manager credentials
+2. 
+
+HOW TO SIGN OUT
+-----------------
+1. Click on the "Sign Out" button on the top left hand side of the page under the nav bar
+2. You will see a 'Logout successful' green message box appear and be signed out, then taken back to the login page
 
 GIT REPOSITORY
 -----------------
