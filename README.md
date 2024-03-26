@@ -11,38 +11,42 @@ ADMIN PANEL
 - For the admin panel, you can login with the following credentials (Admin and Manager):
 - https://djangouniprojectfinal-61eddaacee54.herokuapp.com/admin/
 
+
 HELPDESK TICKETS SYSTEM USER LOGIN PAGE
 - For the helpdesk tickets system, you can login with the following credentials (Admin, Manager or Helpdesk Agents):
 - https://djangouniprojectfinal-61eddaacee54.herokuapp.com/user_login/
+
 
 HELPDESK TICKETS SYSTEM DASHBOARD
 - and then go to the below for the dashboard
 - https://djangouniprojectfinal-61eddaacee54.herokuapp.com/tickets/
 
+
 USER LOGIN CREDENTIALS
 -----------------
+
 
 
 ADMIN
 -----------------
 With the Admin User you are able to create new managers and helpdesk agents and you have full rights to the system. This includes creating, viewing and deleting helpdesk tickets.
-Username: admin
-Password: admin1234
+- Username: admin
+- Password: admin1234
 
 MANAGER
 -----------------
 Managers also have access to the Admin Panel but with limited rights. They can only create new helpdesk agents. Managers can also create new helpdesk tickets, view helpdesk tickets and delete helpdesk tickets.
-Username: manager1
-Password: iamapassword
+- Username: manager1
+- Password: iamapassword
 
 HELPDESK AGENTS
 -----------------
 You are not allowed to view or access the admin panel with any helpdesk agent account. These are only used to create new helpdesk tickets and view helpdesk tickets.
-Username: helpdeskagent1
-Password: hda12345
+- Username: helpdeskagent1
+- Password: hda12345
 
-Username: helpdeskagent2
-Password: hda12345
+- Username: helpdeskagent2
+- Password: hda12345
 
 HOW TO ADD A HELPDESK TICKET (signed in as a helpdesk agent)
 -----------------
@@ -91,9 +95,11 @@ HOW TO SIGN OUT
 1. Click on the "Sign Out" button on the top left hand side of the page under the nav bar
 2. You will see a 'Logout successful' green message box appear and be signed out, then taken back to the login page
 
+
 GIT REPOSITORY
 -----------------
 https://github.com/mrme11y/djangoUniProjectFinal/
+
 
 HOW TO RUN THE APP LOCALLY
 -----------------
