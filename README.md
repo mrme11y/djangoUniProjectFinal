@@ -88,7 +88,14 @@ HOW TO ADD A MANAGER (signed in as an admin)
 HOW TO ADD A HELPDESK AGENT (signed in as a manager)
 -----------------
 1. Login with the manager credentials
-2. 
+2. On the nav bar, click 'Register Helpdesk User'
+3. Click on the "Add" button next to "Users"
+4. Type the new username and password e.g. helpdeskagent3 and hda12345
+5. Click SAVE
+6. On the next page (change user page) type username again e.g. helpdeskagent3 and then add in their First Name, Last Name and Email
+7. Then in the Groups section, under 'Available groups' select 'Helpdesk Agents' and click on the right arrow to move it to the 'Chosen groups'
+8. That will automatically save the user as a helpdesk agent and give them all the correct permissions
+9. Click on the 'SAVE' button at the bottom of the page
 
 HOW TO SIGN OUT
 -----------------
