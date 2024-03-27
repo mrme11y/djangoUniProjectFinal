@@ -110,13 +110,21 @@ https://github.com/mrme11y/djangoUniProjectFinal/
 
 HOW TO RUN THE APP LOCALLY
 -----------------
-1. Clone the repository
-2. Install the requirements/dependencies
-3. Run the server with the command `python manage.py runserver`
-4. Open the browser and go to http://127.0.0.1:8000/user_login/
-5. You can now login with the credentials above
-6. You can also access the admin panel by going to http://127.0.0.1:8000/admin/
-7. You can also access the helpdesk ticket system by going to http://127.0.0.1:8000/tickets/
+1. Clone the repository:
+2. git clone https://github.com/mrme11y/djangoUniProjectFinal.git
+3. Create a virtual environment and activate it:
+4. python -m venv .venv && source .venv/bin/activate
+5. Install the requirements/dependencies
+6. pip install -r requirements.txt
+7. Run the server with the command `python manage.py runserver`
+8. Open the browser and go to http://127.0.0.1:8000/user_login/
+9. You can now login with the credentials above
+10. You can access the admin panel by going to http://127.0.0.1:8000/admin/
+11. You can access the helpdesk ticket system dashboard by going to http://127.0.0.1:8000/tickets/
+12. To deactivate the virtual environment, use deactivate. 
+13. To reactivate it, run:
+14. source .venv/bin/activate
+
 
 HOW TO RUN THE APP ON HEROKU
 -----------------
@@ -126,29 +134,29 @@ HOW TO RUN THE TESTS
 -----------------
 TODO
 
-DEPENDENCIES
+DEPENDENCIES (to automatically install these just follow the HOW TO RUN THE APP LOCALLY setup guide above) 
 -----------------
-- asgiref = "==3.7.2"
-- brotli = "==1.1.0"
-- certifi = "==2024.2.2"
-- charset-normalizer = "==3.3.2"
-- crispy-bootstrap4 = "==2024.1"
-- distlib = "==0.3.8"
-- dj-database-url = "==2.1.0"
-- django = "==5.0.2"
-- django-crispy-forms = "==2.1"
-- filelock = "==3.13.1"
-- gunicorn = "==21.2.0"
-- idna = "==3.6"
-- packaging = "==23.2"
-- pipenv = "==2023.12.1"
-- platformdirs = "==4.2.0"
-- requests = "==2.31.0"
-- sqlparse = "==0.4.4"
-- typing-extensions = "==4.10.0"
-- urllib3 = "==2.2.1"
-- virtualenv = "==20.25.1"
-- whitenoise = "==6.6.0"
-
-REQUIRED PYTHON VERSION = "3.12"
-
+- asgiref==3.7.2
+- Brotli==1.1.0
+- certifi==2024.2.2
+- charset-normalizer==3.3.2
+- crispy-bootstrap4==2024.1
+- distlib==0.3.8
+- dj-database-url==2.1.0
+- Django==5.0.2
+- django-crispy-forms==2.1
+- filelock==3.13.1
+- gunicorn==21.2.0
+- idna==3.6
+- packaging==23.2
+- pipenv==2023.12.1
+- platformdirs==4.2.0
+- requests==2.31.0
+- setuptools==69.1.1
+- sqlparse==0.4.4
+- typing_extensions==4.10.0
+- urllib3==2.2.1
+- virtualenv==20.25.1
+- whitenoise==6.6.0
+- REQUIRED PYTHON VERSION = "3.12"
+- Make sure you have pip3 installed
