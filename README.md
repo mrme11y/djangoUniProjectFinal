@@ -132,7 +132,8 @@ You simply need to click on the link (WEBSITE LOGIN URL https://djangouniproject
 
 HOW TO RUN THE TESTS
 -----------------
-TODO
+run the following command in the terminal:
+python -m unittest
 
 DEPENDENCIES (to automatically install these just follow the HOW TO RUN THE APP LOCALLY setup guide above) 
 -----------------
